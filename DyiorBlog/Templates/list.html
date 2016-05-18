@@ -1,0 +1,20 @@
+<style>
+.content{font-size:12px}
+</style>
+
+<h2>博客列表</h2>
+
+   {% for article in articles%}
+   {{submit_time}}
+   <div>
+     <h3><a href="/blog/view/{{article.id}}">{{ article.title}}</a></h3>
+      <div class="content">
+             {{ article.content }}
+      </div>
+   <div>
+
+   <hr>
+
+   {% endfor %}
+
+<a href="/blog/add/">添加</a>{% csrf_token %}
